@@ -14,9 +14,5 @@ with open("./config/config.yaml", "r") as ymlfile:
 
 client = Client('{0}/{1}'.format(cfg['location']['directory'], args.file), cfg['endpoint']['url'])
 
-if not os.path.isfile(client.file_name):
-	print('File: \'{0}\', not found.'.format(file_name))
-	sys.exit()
-
 client.send_file()
 print(client.format_response())

@@ -1,4 +1,4 @@
-import requests, json
+import sys, os, requests, json
 
 class Client():
 	def __init__(self, file_name, endpoint):
@@ -7,6 +7,10 @@ class Client():
 		self.response = None
 
 	def send_file(self):
+		if not os.path.isfile(self.file_name):
+			print('File: \'{0}\', not found.'.format(self.file_name))
+			sys.exit()
+
 		files = {'file': open(self.file_name, 'rb')}
 		r = requests.post(self.endpoint, files=files)
 
