@@ -13,7 +13,7 @@ class Client():
 		self.response = json.loads(r.text)
 
 	def format_response(self):
-		formatted = ''
+		formatted_text = ''
 
 		for word, amount in self.response.items():
 			formatted_text += "{} {}\n".format(word, amount)
