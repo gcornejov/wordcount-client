@@ -9,3 +9,11 @@ class Client():
 		r = requests.post(self.endpoint, files=files)
 
 		self.response = json.loads(r.text)
+
+	def format_response(self):
+		formatted = ''
+
+		for word, amount in self.response.items():
+			formatted_text += "{} {}\n".format(word, amount)
+
+		return formatted_text
