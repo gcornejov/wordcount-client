@@ -4,11 +4,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--file', '-f', help="text file containing document", type=str)
 args = parser.parse_args()
 
-if not os.path.isfile("./config.yaml"):
-	print('Configuration file: \'./config.yaml\', not found.')
+if not os.path.isfile("./config/config.yaml"):
+	print('Configuration file: \'./config/config.yaml\', not found.')
 	sys.exit()
 
-with open("config.yaml", "r") as ymlfile:
+with open("./config/config.yaml", "r") as ymlfile:
 		cfg = yaml.safe_load(ymlfile)
 
 file_name = '{0}/{1}'.format(cfg['location']['directory'], args.file)
