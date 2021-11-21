@@ -1,11 +1,17 @@
-import argparse, requests, json
+import argparse, requests, yaml, json
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', '-f', help="text file containing document", type=str)
 args = parser.parse_args()
 
-files = {'file': open('./data-in/{0}'.format(args.file), 'rb')}
-r = requests.post('http://127.0.0.1:5000/wordcount', files=files)
+with open("config.yaml", "r") as ymlfile:
+		cfg = yaml.safe_load(ymlfile)
+
+file_name = '{0}/{1}'.format(cfg['location']['directory'], args.file)
+url = cfg['endpoint']['url']
+
+files = {'file': open(file_name, 'rb')}
+r = requests.post(url, files=files)
 
 words = json.loads(r.text)
 for word, amount in words.items():
