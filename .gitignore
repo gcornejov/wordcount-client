@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Input Data Files
-data-in/
+data-in/*
