@@ -5,6 +5,7 @@ RUN apt install software-properties-common -y
 RUN add-apt-repository ppa:deadsnakes/ppa -y
 RUN apt install python3.10 -y
 RUN apt install python3-pip -y
+RUN apt install nano -y
 
 WORKDIR /wordcount-client
 COPY . /wordcount-client
