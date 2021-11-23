@@ -9,7 +9,7 @@ Make sure you have [Docker](https://www.docker.com/) with Docker Compose install
 
 ### Download git repositories
 
-Download **this** and [wordcount-api](https://github.com/gcornejov/wordcount-api) repositories.
+Clone/Copy/Download **this** and [wordcount-api](https://github.com/gcornejov/wordcount-api) repositories.
 
 ### Allocate repositories
 
