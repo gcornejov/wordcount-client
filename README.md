@@ -34,7 +34,7 @@ Inside wordcount-api is the docker-compose file called **wordcount-compose.yaml*
 
 ### Deploy the containers
 
-Open the shell and run de command bellow:
+Open the shell and run the command bellow:
 
 ```sh
 docker-compose -f wordcount-compose.yaml up
@@ -44,13 +44,13 @@ The container should be running and ready to use. ✌🏻
 
 ## Usage
 
-To use the API you need to make a request from de Client terminal, as:
+To use the API you need to make a request from the Client terminal, as:
 
 ```python
 python3 wordcount_client.py [--file | -f] <file_name>
 ```
 
-Also, you need to have a plain-text file with the words to coun in the data-in/ directory.
+Also, you need to have a plain-text file with the words to count in the data-in/ directory.
 
 So, create a file in the data-in/ directory:
 
