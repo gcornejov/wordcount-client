@@ -2,4 +2,4 @@ location:
   directory : './data-in'
 
 endpoint:
-  url: 'http://localhost:5000/wordcount'
+  url: 'http://wordcount-api:5000/wordcount'
